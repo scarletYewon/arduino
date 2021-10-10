@@ -12,7 +12,7 @@
 
 // global variables
 float timeout; // unit: us
-float dist_min, dist_max, dist_raw, dist_ma, median; // unit: mm
+float dist_min, dist_max, dist_raw, median; // unit: mm
 unsigned long last_sampling_time; // unit: ms
 float scale; // used for pulse duration to distance conversion
 float median_raw[MA];
