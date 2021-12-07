@@ -5,7 +5,7 @@
 
 // configurable parameters
 #define _DUTY_MIN 553 // servo full clockwise position (0 degree)
-#define _DUTY_NEU 1476 // servo neutral position (90 degree)
+#define _DUTY_NEU 1426 // servo neutral position (90 degree)
 #define _DUTY_MAX 2399 // servo full counterclockwise position (180 degree)
 
 #define _POS_START (_DUTY_MIN + 100)
@@ -26,7 +26,7 @@ void setup() {
 // initialize GPIO pins
   myservo.attach(PIN_SERVO); 
   duty_target = duty_curr = _POS_START;
-  myservo.writeMicroseconds(duty_curr);
+//  myservo.writeMicroseconds(duty_curr);
   
 // initialize serial port
   Serial.begin(57600);
@@ -37,7 +37,8 @@ void setup() {
 // remove next three lines after finding answers
 //  Serial.print("duty_chg_per_interval:");
 //  Serial.println(duty_chg_per_interval);
-//  while(1) {}
+  myservo.writeMicroseconds(_DUTY_NEU);
+  while(1) {}
 
 // initialize variables for servo update.
   pause_time = 1;
