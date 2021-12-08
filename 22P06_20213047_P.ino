@@ -31,8 +31,6 @@
 
 // PID parameters
 #define _Kp 1.5  // PID Propotional gain for P
-#define _Ki 1.0  // PID Propotional gain for I
-#define _Kd 1.0  // PID Propotional gain for D
 
 // global variables 
 float dist_min, dist_max, dist_raw, dist_ema, alpha;
